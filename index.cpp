@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// ----------------- Transaction -----------------
+// Transaction
 class Transaction {
 public:
     string sender;
@@ -22,7 +22,7 @@ public:
     }
 };
 
-// ----------------- Block -----------------
+// Block 
 class Block {
 public:
     int index;
@@ -60,7 +60,7 @@ public:
 };
 
 
-// ----------------- Blockchain -----------------
+// Blockchain 
 class Blockchain {
 public:
     vector<Block> chain;
@@ -108,7 +108,7 @@ public:
     }
 };
 
-// ----------------- MAIN -----------------
+// MAIN 
 int main() {
     Blockchain myChain;
     vector<Transaction> pendingTransactions;
@@ -148,10 +148,10 @@ int main() {
             myChain.printChain();
         }
         else if (choice == 4) {
-            cout << "Blockchain is " << (myChain.isValid() ? "valid ✅\n" : "invalid ❌\n");
+            cout << "Blockchain is " << (myChain.isValid() ? "valid \n" : "invalid \n");
         }
         else if (choice == 5) {
-            myChain.mineRandomBlocks(10, 2); // 10 blocks, 2 random transactions each
+            myChain.mineRandomBlocks(10, 2); 
             cout << "10 random blocks added!\n";
         }
         else if (choice == 6) {
